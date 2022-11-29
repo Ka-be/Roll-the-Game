@@ -1,0 +1,56 @@
+body {
+	height: 100vh;
+	width: 100vw;
+}
+
+// MOBILE VERSION
+
+.players-container {
+	height: 100%;
+	width: 100%;
+	z-index: -1;
+
+	@include column-center;
+}
+
+.player-box {
+	height: 50%;
+	width: 100%;
+
+	@include column-center;
+
+	.player-infos {
+		background: red;
+		height: 80%;
+		width: 100%;
+	}
+}
+
+.player1 {
+	@include column-center-top;
+}
+.player2 {
+	@include column-center-top-reverse;
+}
+
+.player-infos--total {
+	height: 200px;
+	width: 90%;
+	background: yellow;
+}
+
+.player-infos--current {
+	height: 100px;
+	width: 60%;
+	background: $grey;
+	border-radius: 20px;
+}
+
+.game-container {
+	width: 100%;
+	height: 20%;
+	position: absolute;
+	top: calc((50% - 10%));
+
+	@include row-space-evenly;
+}

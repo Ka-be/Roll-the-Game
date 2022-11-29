@@ -1,0 +1,149 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  font-family: "lato", sans-serif;
+  margin: 0;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+a:visited {
+  color: inherit;
+}
+a:active {
+  color: inherit;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+}
+
+.players-container {
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.player-box {
+  height: 50%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.player-box .player-infos {
+  background: red;
+  height: 80%;
+  width: 100%;
+}
+
+.player1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.player2 {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.player-infos--total {
+  height: 200px;
+  width: 90%;
+  background: yellow;
+}
+
+.player-infos--current {
+  height: 100px;
+  width: 60%;
+  background: #637582;
+  border-radius: 20px;
+}
+
+.game-container {
+  width: 100%;
+  height: 20%;
+  position: absolute;
+  top: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.active-player {
+  background: #38434B;
+}
+
+.passive-player {
+  background: #1E272E;
+}
+
+.dice {
+  height: 150px;
+  width: 150px;
+  background: #DFE5F2;
+  border-radius: 20px;
+}
+
+.new-game {
+  height: 60px;
+  width: 60px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-radius: 100%;
+  border: none;
+  background: #DFE5F2;
+  background-image: url(/images/icons/new.svg);
+}
+
+.game-button {
+  height: 70px;
+  width: 70px;
+  border-radius: 100%;
+  background: #933CFF;
+}
+
+.roll {
+  background-image: url(/images/icons/dice.svg);
+  background-repeat: no-repeat;
+  background-size: 80%;
+  background-position: center;
+}
+
+.save {
+  background-image: url(/images/icons/save.svg);
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 50%;
+  text-align: right;
+}
+footer #github {
+  width: 15%;
+  margin-right: 10px;
+}
+footer #logo {
+  width: 30%;
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,29 @@
+.new-game{
+  height: 60px;
+  width: 60px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-radius: 100%;
+  border: none;
+  background: $light-grey;
+  background-image: url(/images/icons/new.svg);
+}
+
+.game-button{
+  height: 70px;
+  width: 70px;
+  border-radius: 100%;
+  background: $purple;
+}
+
+.roll{
+  background-image: url(/images/icons/dice.svg);
+  background-repeat: no-repeat;
+  background-size: 80%;
+  background-position: center;
+}
+
+.save{
+  background-image: url(/images/icons/save.svg);
+}

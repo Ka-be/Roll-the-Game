@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<!-- FAVICON -->
+		<link
+			rel="apple-touch-icon"
+			sizes="180x180"
+			href="/images/favicon/apple-touch-icon.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="/images/favicon/favicon-32x32.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="16x16"
+			href="/images/favicon/favicon-16x16.png"
+		/>
+		<link rel="manifest" href="/site.webmanifest" />
+
+		<!-- FONT - LATO -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&display=swap"
+			rel="stylesheet"
+		/>
+
+		<!-- STYLE -->
+		<link rel="stylesheet" href="styles/style.css" />
+		<title>Roll - The dice game</title>
+	</head>
+	<body>
+		<div class="players-container">
+			<div class="player-box active-player">
+				<div class="player-infos player1">
+					<div class="player-infos--total player1">
+            <p>Player 1</p>
+            <p>56</p>
+          </div>
+					<div class="player-infos--current"></div>
+				</div>
+			</div>
+			<div class="player-box passive-player">
+				<div class="player-infos player2">
+					<div class="player-infos--total player2">
+            <p>Player 2</p>
+            <p>34</p>
+          </div>
+					<div class="player-infos--current"></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="game-container">
+			<div class="game-button roll"></div>
+			<div class="dice">
+				<img src="/images/dice_5.svg" alt="" />
+				<!-- TO BE DELETE FOR RANDOM DISPLAY -->
+			</div>
+			<div class="game-button save"></div>
+		</div>
+
+		<button class="new-game"></button>
+
+		<footer>
+			<a href="https://github.com/Ka-be" target="_blank">
+				<img src="/images/icons/github.svg" alt="Github logo" id="github" />
+			</a>
+			<img src="/images/logo.svg" alt="Roll logo" id="logo" />
+		</footer>
+
+		<!-- JS -->
+		<script
+			src="https://code.jquery.com/jquery-3.6.1.min.js"
+			integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+			crossorigin="anonymous"
+		></script>
+		<script src="/js/app.js"></script>
+	</body>
+</html>

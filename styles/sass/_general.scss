@@ -1,0 +1,16 @@
+// PLAYERS SCREENS
+.active-player {
+	background: $active-player;
+}
+
+.passive-player {
+	background: $passive-player;
+}
+
+//DICE
+.dice {
+	height: 150px;
+	width: 150px;
+	background: $light-grey;
+  border-radius: 20px;
+}
