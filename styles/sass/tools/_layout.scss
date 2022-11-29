@@ -20,9 +20,10 @@ body {
 	@include column-center;
 
 	.player-infos {
-		background: red;
+		// background: red;
 		height: 80%;
 		width: 100%;
+		color: white;
 	}
 }
 
@@ -36,7 +37,7 @@ body {
 .player-infos--total {
 	height: 200px;
 	width: 90%;
-	background: yellow;
+	// background: yellow;
 }
 
 .player-infos--current {

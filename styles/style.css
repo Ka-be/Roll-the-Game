@@ -46,9 +46,9 @@ body {
   align-items: center;
 }
 .player-box .player-infos {
-  background: red;
   height: 80%;
   width: 100%;
+  color: white;
 }
 
 .player1 {
@@ -68,7 +68,6 @@ body {
 .player-infos--total {
   height: 200px;
   width: 90%;
-  background: yellow;
 }
 
 .player-infos--current {
