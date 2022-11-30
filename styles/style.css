@@ -122,9 +122,10 @@ body {
 .active-player {
   background: #2a3238;
 }
-.active-player .player-name::after, .active-player .player-name::before {
+.active-player .player-name::after,
+.active-player .player-name::before {
   display: inline-block;
-  background: #CEA6FF;
+  background: #cea6ff;
   box-shadow: 0 0 20px 5px hsl(267deg, 100%, 62%);
   width: 0.2em;
   height: 100%;
@@ -133,7 +134,7 @@ body {
 }
 
 .passive-player {
-  background: #1E272E;
+  background: #1e272e;
 }
 
 .player-name {
@@ -149,7 +150,7 @@ body {
 
 .total-score {
   font-weight: 400;
-  color: #933CFF;
+  color: #933cff;
   font-size: 3em;
 }
 
@@ -159,7 +160,7 @@ body {
 }
 
 .current-score-number {
-  color: #CEA6FF;
+  color: #cea6ff;
   font-size: 2em;
   font-weight: 300;
 }
@@ -167,7 +168,7 @@ body {
 .dice {
   height: 150px;
   width: 150px;
-  background: #DFE5F2;
+  background: #dfe5f2;
   border-radius: 20px;
   box-shadow: 4px 8px 20px rgba(0, 0, 0, 0.355);
 }
@@ -198,7 +199,7 @@ body {
   left: 0;
   border-radius: 25px;
   border: none;
-  background: #DFE5F2;
+  background: #dfe5f2;
   font-size: 2em;
   font-weight: 700;
   display: flex;
@@ -213,7 +214,7 @@ body {
   height: 70px;
   width: 70px;
   border-radius: 100%;
-  background: #933CFF;
+  background: #933cff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
 }
 

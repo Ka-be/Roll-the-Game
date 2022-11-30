@@ -1,83 +1,78 @@
-.new-game{
-  height: 50px;
-  width: 50px;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  border-radius: 25px;
-  border: none;
-  background: $light-grey;
-  font-size: 2em;
-  font-weight: 700;
+.new-game {
+	height: 50px;
+	width: 50px;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	border-radius: 25px;
+	border: none;
+	background: $light-grey;
+	font-size: 2em;
+	font-weight: 700;
 
-  @include row-center;
+	@include row-center;
 
-  .new-game-text{
-    display: none;
-  }
+	.new-game-text {
+		display: none;
+	}
 }
 
-.game-button{
-  height: 70px;
-  width: 70px;
-  border-radius: 100%;
-  background: $purple;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+.game-button {
+	height: 70px;
+	width: 70px;
+	border-radius: 100%;
+	background: $purple;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
 }
 
-.roll{
-  background-image: url(/images/icons/dice.svg);
-  background-repeat: no-repeat;
-  background-size: 80%;
-  background-position: center;
+.roll {
+	background-image: url(/images/icons/dice.svg);
+	background-repeat: no-repeat;
+	background-size: 80%;
+	background-position: center;
 }
 
-.save{
-  background-image: url(/images/icons/save.svg);
+.save {
+	background-image: url(/images/icons/save.svg);
 }
-
-
-
 
 //--------------------------------------------
 // DESKTOP DISPLAY
 
 @media (min-width: 1024px) {
-  .new-game .new-game-text {
-    max-width: 0;
-    -webkit-transition: max-width 1s;
-    transition: max-width 1s;
-    display: inline-block;
-    white-space: nowrap;
-    overflow: hidden;
-  }
+	.new-game .new-game-text {
+		max-width: 0;
+		-webkit-transition: max-width 1s;
+		transition: max-width 1s;
+		display: inline-block;
+		white-space: nowrap;
+		overflow: hidden;
+	}
 
-  .new-game-text{
-    font-size: .5em;
-  }
+	.new-game-text {
+		font-size: 0.5em;
+	}
 
-  .new-game:hover .new-game-text {
-    max-width: 7rem;
-  }
+	.new-game:hover .new-game-text {
+		max-width: 7rem;
+	}
 
+	.game-button {
+		transition: all 0.2s ease;
+		cursor: pointer;
+		opacity: 0.9;
+		height: 100px;
+		width: 100px;
 
-  .game-button{
-    transition: all 0.2s ease;
-    cursor: pointer;
-    opacity: 0.9;
-    height: 100px;
-    width: 100px;
+		&:hover {
+			opacity: 1;
+			box-shadow: 0 0 20px hsla(267, 100%, 62%, 0.7);
+		}
 
-    &:hover{
-      opacity: 1;
-      box-shadow: 0 0 20px hsla(267, 100%, 62%, 0.7) ;
-    }
-
-    &:active{
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
-      transform: translateY(2px);
-      filter: brightness(0.9);
-    }
-  }
+		&:active {
+			box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+			transform: translateY(2px);
+			filter: brightness(0.9);
+		}
+	}
 }
-

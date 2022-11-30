@@ -2,13 +2,14 @@
 .active-player {
 	background: $active-player;
 
-	.player-name::after, .player-name::before{
+	.player-name::after,
+	.player-name::before {
 		display: inline-block;
 		background: $light-purple;
-		box-shadow: 0 0 20px 5px hsla(267, 100%, 62%, 1) ;
-		width: .2em;
+		box-shadow: 0 0 20px 5px hsla(267, 100%, 62%, 1);
+		width: 0.2em;
 		height: 100%;
-		content:"";
+		content: "";
 		margin: 0 1em 0 0.8em;
 	}
 }
@@ -18,28 +19,28 @@
 }
 
 // PLAYERS INFOS
-.player-name{
+.player-name {
 	text-transform: uppercase;
 	font-weight: 300;
 	letter-spacing: 10px;
 	font-size: 1.8em;
 	line-height: 1.2em;
 
-	@include row-center;	
+	@include row-center;
 }
 
-.total-score{
+.total-score {
 	font-weight: 400;
 	color: $purple;
 	font-size: 3em;
 }
 
-.current-score-title{
+.current-score-title {
 	text-transform: uppercase;
 	font-weight: 100;
 }
 
-.current-score-number{
+.current-score-number {
 	color: $light-purple;
 	font-size: 2em;
 	font-weight: 300;
@@ -50,28 +51,28 @@
 	height: 150px;
 	width: 150px;
 	background: $light-grey;
-  border-radius: 20px;
+	border-radius: 20px;
 	box-shadow: 4px 8px 20px rgba(0, 0, 0, 0.355);
 }
 
 @media (min-width: 1024px) {
-	.player-name{
+	.player-name {
 		font-size: 2.5em;
 	}
 
-	.total-score{
+	.total-score {
 		font-size: 5em;
 	}
-	
-	.current-score-title{
+
+	.current-score-title {
 		font-size: 1.5em;
 	}
-	
-	.current-score-number{
+
+	.current-score-number {
 		font-size: 2.5em;
 	}
 
-	.dice{
+	.dice {
 		height: 200px;
 		width: 200px;
 	}
