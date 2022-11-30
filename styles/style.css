@@ -94,7 +94,7 @@ body {
   justify-content: space-evenly;
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 1024px) {
   .players-container {
     flex-direction: row;
   }
@@ -116,7 +116,7 @@ body {
   font-weight: 300;
   letter-spacing: 10px;
   font-size: 1.8em;
-  line-height: 1.5em;
+  line-height: 1.3em;
 }
 
 .total-score {
@@ -186,4 +186,21 @@ footer #github {
 }
 footer #logo {
   width: 30%;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: 50px;
+  width: auto;
+}
+footer #github, footer #logo {
+  max-height: 100%;
+}
+footer #github {
+  opacity: 0.6;
+}
+footer #github:hover {
+  opacity: 1;
 }/*# sourceMappingURL=style.css.map */

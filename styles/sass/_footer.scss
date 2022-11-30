@@ -16,3 +16,27 @@ footer{
     width: 30%;
   }
 }
+
+
+//--------------------------------------------
+// DESKTOP DISPLAY
+
+
+footer{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: 50px;
+  width: auto;
+
+  #github, #logo{
+    max-height: 100%;
+  }
+
+  #github{
+    opacity: 0.6;
+  }
+  #github:hover{
+    opacity: 1;
+  }
+}
