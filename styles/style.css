@@ -202,6 +202,7 @@ body {
   }
   .game-button:hover {
     opacity: 1;
+    box-shadow: 0 0 20px hsla(267deg, 100%, 62%, 0.7);
   }
   .game-button:active {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
