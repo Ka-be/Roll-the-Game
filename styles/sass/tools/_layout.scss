@@ -3,7 +3,7 @@ body {
 	width: 100vw;
 }
 
-// MOBILE VERSION
+// MOBILE DISPLAY (COLUMN)
 
 .players-container {
 	height: 100%;
@@ -57,4 +57,33 @@ body {
 	top: calc((50% - 10%));
 
 	@include row-space-evenly;
+}
+
+//--------------------------------------------
+// DESKTOP DISPLAY (ROW)
+@media (min-width: 1024px) {
+	.players-container {
+		flex-direction: row;
+	}
+
+	.player-box {
+		height: 100%;
+		width: 50%;
+	}
+
+	.player-infos,
+	.player-infos--total {
+		justify-content: space-evenly;
+		flex-direction: column; //Reset reverse display
+	}
+
+	.game-container {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+
+		@include column-center;
+		justify-content: space-evenly;
+	}
 }

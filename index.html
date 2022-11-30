@@ -34,16 +34,18 @@
 		/>
 
 		<link rel="stylesheet" href="styles/style.css" />
-		<title>Roll - The dice game</title>
+		<title>ROLL - The dice game</title>
 	</head>
 	<body>
 		<div class="players-container">
 			<div class="player-box active-player">
+				<!-- active player -> Dynamic class with JS -->
+
 				<div class="player-infos column-centered">
 					<div class="player-infos--total column-centered">
-            <h2 class="player-name" id="player1-name">Player 1</h2>
-            <h3 class="total-score" id="player1-total-score">78</h3>
-          </div>
+						<h2 class="player-name" id="player1-name">Player 1</h2>
+						<h3 class="total-score" id="player1-total-score">78</h3>
+					</div>
 					<div class="player-infos--current">
 						<h4 class="current-score-title">Round Score</h4>
 						<p class="current-score-number" id="player1-current-score">21</p>
@@ -51,11 +53,12 @@
 				</div>
 			</div>
 			<div class="player-box passive-player">
+				<!-- passive player -> Dynamic class with JS -->
 				<div class="player-infos column-reversed">
 					<div class="player-infos--total column-reversed">
-            <h2 class="player-name" id="player2-name">Player 2</h2>
-            <h3 class="total-score" id="player2-total-score">54</h3>
-          </div>
+						<h2 class="player-name" id="player2-name">Player 2</h2>
+						<h3 class="total-score" id="player2-total-score">54</h3>
+					</div>
 					<div class="player-infos--current">
 						<h4 class="current-score-title">Round Score</h4>
 						<p class="current-score-number" id="player1-current-score">12</p>
@@ -73,7 +76,10 @@
 			<div class="game-button save"></div>
 		</div>
 
-		<button class="new-game"></button>
+		<button class="new-game">
+			+
+			<span class="new-game-text">New game</span>
+		</button>
 
 		<footer>
 			<a href="https://github.com/Ka-be" target="_blank">

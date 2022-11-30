@@ -1,26 +1,32 @@
-@mixin column-center{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+@mixin column-center {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 
-@mixin column-center-top{
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
+@mixin column-center-top {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
 }
 
-@mixin column-center-top-reverse{
-  display: flex;
-  flex-direction: column-reverse;
-  justify-content: flex-start;
-  align-items: center;
+@mixin column-center-top-reverse {
+	display: flex;
+	flex-direction: column-reverse;
+	justify-content: flex-start;
+	align-items: center;
 }
 
-@mixin row-space-evenly{
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
+@mixin row-space-evenly {
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+}
+
+@mixin row-center {
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
