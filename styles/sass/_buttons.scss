@@ -4,13 +4,16 @@
   position: absolute;
   bottom: 0;
   left: 0;
-  border-radius: 100%;
+  border-radius: 25px;
   border: none;
   background: $light-grey;
+  font-size: 2em;
+  font-weight: 700;
+
   @include row-center;
 
-  >img{
-    width: 80px;
+  .new-game-text{
+    display: none;
   }
 }
 
@@ -40,9 +43,23 @@
 // DESKTOP DISPLAY
 
 @media (min-width: 1024px) {
-  .new-game:hover{
-    width: 200px;
+  .new-game .new-game-text {
+    max-width: 0;
+    -webkit-transition: max-width 1s;
+    transition: max-width 1s;
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
   }
+
+  .new-game-text{
+    font-size: .5em;
+  }
+
+  .new-game:hover .new-game-text {
+    max-width: 7rem;
+  }
+
 
   .game-button{
     transition: all 0.2s ease;
