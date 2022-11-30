@@ -102,9 +102,34 @@ body {
     height: 100%;
     width: 50%;
   }
+  .player-infos,
+.player-infos--total {
+    justify-content: space-evenly;
+    flex-direction: column;
+  }
+  .game-container {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+  }
 }
 .active-player {
-  background: #38434B;
+  background: #2a3238;
+}
+.active-player .player-name::after, .active-player .player-name::before {
+  display: inline-block;
+  background: #933CFF;
+  box-shadow: 0 0 20px hsl(267deg, 100%, 62%);
+  width: 0.2em;
+  height: 100%;
+  content: "";
+  margin: 0 1em 0 0.8em;
 }
 
 .passive-player {
@@ -116,7 +141,10 @@ body {
   font-weight: 300;
   letter-spacing: 10px;
   font-size: 1.8em;
-  line-height: 1.3em;
+  line-height: 1.2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .total-score {
@@ -143,6 +171,24 @@ body {
   border-radius: 20px;
 }
 
+@media (min-width: 1024px) {
+  .player-name {
+    font-size: 2.5em;
+  }
+  .total-score {
+    font-size: 5em;
+  }
+  .current-score-title {
+    font-size: 1.5em;
+  }
+  .current-score-number {
+    font-size: 2.5em;
+  }
+  .dice {
+    height: 200px;
+    width: 200px;
+  }
+}
 .new-game {
   height: 50px;
   width: 50px;
@@ -199,6 +245,8 @@ body {
     transition: all 0.2s ease;
     cursor: pointer;
     opacity: 0.9;
+    height: 100px;
+    width: 100px;
   }
   .game-button:hover {
     opacity: 1;
