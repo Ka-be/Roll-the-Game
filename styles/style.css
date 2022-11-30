@@ -124,8 +124,8 @@ body {
 }
 .active-player .player-name::after, .active-player .player-name::before {
   display: inline-block;
-  background: #933CFF;
-  box-shadow: 0 0 20px hsl(267deg, 100%, 62%);
+  background: #CEA6FF;
+  box-shadow: 0 0 20px 5px hsl(267deg, 100%, 62%);
   width: 0.2em;
   height: 100%;
   content: "";
@@ -169,6 +169,7 @@ body {
   width: 150px;
   background: #DFE5F2;
   border-radius: 20px;
+  box-shadow: 4px 8px 20px rgba(0, 0, 0, 0.355);
 }
 
 @media (min-width: 1024px) {

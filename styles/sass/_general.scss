@@ -4,8 +4,8 @@
 
 	.player-name::after, .player-name::before{
 		display: inline-block;
-		background: $purple;
-		box-shadow: 0 0 20px hsla(267, 100%, 62%, 1) ;
+		background: $light-purple;
+		box-shadow: 0 0 20px 5px hsla(267, 100%, 62%, 1) ;
 		width: .2em;
 		height: 100%;
 		content:"";
@@ -51,6 +51,7 @@
 	width: 150px;
 	background: $light-grey;
   border-radius: 20px;
+	box-shadow: 4px 8px 20px rgba(0, 0, 0, 0.355);
 }
 
 @media (min-width: 1024px) {
