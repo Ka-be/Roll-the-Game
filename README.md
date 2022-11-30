@@ -43,16 +43,16 @@ A Realization of a browser game for the mock school exam [STUDI](https://www.stu
 
 ## 🎨 Color Reference
 
-| Color | Hex                                                              |
-| ----- | ---------------------------------------------------------------- |
-| -     | ![#38434B](https://via.placeholder.com/10/38434B?text=+) #38434B |
-| -     | ![#1E272E](https://via.placeholder.com/10/1E272E?text=+) #1E272E |
-| -     | ![#FFFFFF](https://via.placeholder.com/10/FFFFFF?text=+) #FFFFFF |
-| -     | ![#933CFF](https://via.placeholder.com/10/933CFF?text=+) #933CFF |
-| -     | ![#CEA6FF](https://via.placeholder.com/10/CEA6FF?text=+) #CEA6FF |
-| -     | ![#78838B](https://via.placeholder.com/10/78838B?text=+) #78838B |
-| -     | ![#637582](https://via.placeholder.com/10/637582?text=+) #637582 |
-| -     | ![#DFE5F2](https://via.placeholder.com/10/DFE5F2?text=+) #DFE5F2 |
+Hex                                                              |
+---------------------------------------------------------------- |
+![#38434B](https://via.placeholder.com/10/38434B?text=+) #38434B |
+![#1E272E](https://via.placeholder.com/10/1E272E?text=+) #1E272E |
+![#FFFFFF](https://via.placeholder.com/10/FFFFFF?text=+) #FFFFFF |
+![#933CFF](https://via.placeholder.com/10/933CFF?text=+) #933CFF |
+![#CEA6FF](https://via.placeholder.com/10/CEA6FF?text=+) #CEA6FF |
+![#78838B](https://via.placeholder.com/10/78838B?text=+) #78838B |
+![#637582](https://via.placeholder.com/10/637582?text=+) #637582 |
+![#DFE5F2](https://via.placeholder.com/10/DFE5F2?text=+) #DFE5F2 |
 
 ---
 
