@@ -7,7 +7,11 @@
   border-radius: 100%;
   border: none;
   background: $light-grey;
-  background-image: url(/images/icons/new.svg);
+  @include row-center;
+
+  >img{
+    width: 80px;
+  }
 }
 
 .game-button{
@@ -15,6 +19,7 @@
   width: 70px;
   border-radius: 100%;
   background: $purple;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
 }
 
 .roll{
@@ -27,3 +32,32 @@
 .save{
   background-image: url(/images/icons/save.svg);
 }
+
+
+
+
+//--------------------------------------------
+// DESKTOP DISPLAY
+
+@media (min-width: 1024px) {
+  .new-game:hover{
+    width: 200px;
+  }
+
+  .game-button{
+    transition: all 0.2s ease;
+    cursor: pointer;
+    opacity: 0.9;
+
+    &:hover{
+      opacity: 1;
+    }
+
+    &:active{
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+      transform: translateY(2px);
+      filter: brightness(0.9);
+    }
+  }
+}
+

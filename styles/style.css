@@ -152,7 +152,12 @@ body {
   border-radius: 100%;
   border: none;
   background: #DFE5F2;
-  background-image: url(/images/icons/new.svg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.new-game > img {
+  width: 80px;
 }
 
 .game-button {
@@ -160,6 +165,7 @@ body {
   width: 70px;
   border-radius: 100%;
   background: #933CFF;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
 }
 
 .roll {
@@ -173,6 +179,24 @@ body {
   background-image: url(/images/icons/save.svg);
 }
 
+@media (min-width: 1024px) {
+  .new-game:hover {
+    width: 200px;
+  }
+  .game-button {
+    transition: all 0.2s ease;
+    cursor: pointer;
+    opacity: 0.9;
+  }
+  .game-button:hover {
+    opacity: 1;
+  }
+  .game-button:active {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+    transform: translateY(2px);
+    filter: brightness(0.9);
+  }
+}
 footer {
   position: absolute;
   bottom: 0;
@@ -188,19 +212,22 @@ footer #logo {
   width: 30%;
 }
 
-footer {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  height: 50px;
-  width: auto;
-}
-footer #github, footer #logo {
-  max-height: 100%;
-}
-footer #github {
-  opacity: 0.6;
-}
-footer #github:hover {
-  opacity: 1;
+@media (min-width: 1024px) {
+  footer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 50px;
+    width: auto;
+  }
+  footer #github,
+footer #logo {
+    max-height: 100%;
+  }
+  footer #github {
+    opacity: 0.6;
+  }
+  footer #github:hover {
+    opacity: 1;
+  }
 }/*# sourceMappingURL=style.css.map */
