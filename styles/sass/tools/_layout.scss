@@ -20,31 +20,34 @@ body {
 	@include column-center;
 
 	.player-infos {
-		// background: red;
 		height: 80%;
 		width: 100%;
 		color: white;
 	}
 }
 
-.player1 {
+.column-centered {
 	@include column-center-top;
 }
-.player2 {
+.column-reversed {
 	@include column-center-top-reverse;
 }
 
 .player-infos--total {
-	height: 200px;
+	height: auto;
 	width: 90%;
-	// background: yellow;
 }
 
 .player-infos--current {
-	height: 100px;
-	width: 60%;
+	height: auto;
+	width: auto;
+	padding: 1.2em;
 	background: $grey;
 	border-radius: 20px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+
+	@include column-center;
 }
 
 .game-container {
