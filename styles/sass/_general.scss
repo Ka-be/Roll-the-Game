@@ -1,4 +1,9 @@
 // PLAYERS SCREENS
+.player-box{
+	background: $passive-player;
+}
+
+
 .active-player {
 	background: $active-player;
 
@@ -12,10 +17,6 @@
 		content: "";
 		margin: 0 1em 0 0.8em;
 	}
-}
-
-.passive-player {
-	background: $passive-player;
 }
 
 // PLAYERS INFOS

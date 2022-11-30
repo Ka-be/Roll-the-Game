@@ -119,6 +119,10 @@ body {
     justify-content: space-evenly;
   }
 }
+.player-box {
+  background: #1e272e;
+}
+
 .active-player {
   background: #2a3238;
 }
@@ -131,10 +135,6 @@ body {
   height: 100%;
   content: "";
   margin: 0 1em 0 0.8em;
-}
-
-.passive-player {
-  background: #1e272e;
 }
 
 .player-name {
@@ -192,8 +192,8 @@ body {
   }
 }
 .new-game {
-  height: 50px;
-  width: 50px;
+  height: 40px;
+  width: 40px;
   position: absolute;
   bottom: 0;
   left: 0;

@@ -12,7 +12,6 @@ A Realization of a browser game for the mock school exam [STUDI](https://www.stu
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?&logo=html5&logoColor=white)
 ![SASS](https://img.shields.io/badge/Sass-CC6699?&logo=sass&logoColor=white)
 ![JS](https://img.shields.io/badge/JavaScript-F7DF1E?&logo=javascript&logoColor=black)
-![jQuery](https://img.shields.io/badge/jQuery-0769AD?&logo=jquery&logoColor=white)
 
 **Server:**
 ![None](https://img.shields.io/badge/NONE-778899?)
