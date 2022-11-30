@@ -3,7 +3,7 @@ body {
 	width: 100vw;
 }
 
-// MOBILE VERSION
+// MOBILE DISPLAY (COLUMN)
 
 .players-container {
 	height: 100%;
@@ -57,4 +57,17 @@ body {
 	top: calc((50% - 10%));
 
 	@include row-space-evenly;
+}
+
+
+// DESKTOP DISPLAY (ROW)
+@media (min-width: 1000px) {
+	.players-container{
+		flex-direction: row;
+	}
+
+	.player-box{
+		height: 100%;
+		width: 50%;
+	}
 }

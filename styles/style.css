@@ -94,6 +94,15 @@ body {
   justify-content: space-evenly;
 }
 
+@media (min-width: 1000px) {
+  .players-container {
+    flex-direction: row;
+  }
+  .player-box {
+    height: 100%;
+    width: 50%;
+  }
+}
 .active-player {
   background: #38434B;
 }
