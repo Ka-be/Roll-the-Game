@@ -1,3 +1,17 @@
+/**************/
+/* GAME RULES */
+/**************/
+
+/*
+
+- The game has 2 players, playing in rounds;
+- In each turn, a player rolls a dice as many times as he whishes. Each result get added to his ROUND score;
+- BUT, if the player rolls a 1, all his ROUND score gets lost. After that, it's the next player's turn
+- The player can choose to 'Hold', which means that his ROUND score gets added to his GLOBAL score. After that, it's the next player's turn;
+- The first player to reach 100 points on GLOBAL score wins the game.
+
+*/
+
 //PLAYERS DATA
 let players = [
 	{
@@ -5,6 +19,7 @@ let players = [
 		name: "Player 1",
 		roundScore: 0,
 		totalScore: 0,
+		isPlaying: true,
 		isTheWinner: false,
 	},
 	{
@@ -12,14 +27,12 @@ let players = [
 		name: "Player 2",
 		roundScore: 0,
 		totalScore: 0,
+		isPlaying: false,
 		isTheWinner: false,
 	},
 ];
 
-
-
-
-// RANDOM DICE NUMBER PART
+// GENERATE A RANDOM DICE NUMBER
 const rollButton = document.getElementById("roll"); //Button roll
 let diceDisplay = document.getElementById("diceDisplay"); //Dice picture
 
@@ -29,7 +42,7 @@ rollButton.addEventListener("click", () => {
 	diceDisplay.src = "images/dice_" + diceNumber + ".svg";
 });
 
-// CHANGE PLAYERS
+// CHANGE PLAYER - SAVE ROUND
 const saveButton = document.getElementById("save");
 const player1Screen = document.getElementById("player1-screen");
 const player2Screen = document.getElementById("player2-screen");
@@ -38,30 +51,55 @@ saveButton.addEventListener("click", () => {
 	player1Screen.classList.toggle("active-player");
 	player2Screen.classList.toggle("active-player");
 	diceDisplay.style = "display:none"; // Hide the dice at the change of player
+	// Add current score to total score
+
+
+	//Change status isPlaying
+	
 });
 
-//LAUNCH GAME
-//Récuperer les noms des joueurs
-//Les afficher
-//Display none welcome, display section game(delete display none)
+// TEST - Condition changement statut isPlaying
 
+//-------------------
 
-//Recup Nom joueur
-let player1Input = document.getElementById('p1');
-let player2Input = document.getElementById('p2');
+//PLAYERS NAMES IMPUT
+let player1Input = document.getElementById("p1");
+let player2Input = document.getElementById("p2");
 
+//PLAYERS NAMES in DOM
+const player1DisplayedName = document.getElementById("player1-name");
+const player2DisplayedName = document.getElementById("player2-name");
 
+// DISPLAY TOTAL SCORE
+const player1TotalScore = document.getElementById("player1-total-score");
+const player2TotalScore = document.getElementById("player2-total-score");
+player1TotalScore.innerText = players[0].totalScore;
+player2TotalScore.innerText = players[1].totalScore;
 
-// DISPLAY PLAYERS NAMES
-const player1DisplayedName = document.getElementById('player1-name');
-const player2DisplayedName = document.getElementById('player2-name');
+// DISPLAY ROUND SCORE
+const player1RoundScore = document.getElementById("player1-current-score");
+const player2RoundScore = document.getElementById("player2-current-score");
+player1RoundScore.innerText = players[0].roundScore;
+player2RoundScore.innerText = players[1].roundScore;
 
+// LAUNCH
+// Hide Welcome Screen / Display players name
 
-// ECRANS
+function launchGame() {
+	//DISPLAY NAMES at LAUNCH
 
-function launchGame(){
-	const welcomeScreen = document.getElementById('welcome');
-	const gameScreen = document.getElementById('game');
-	welcomeScreen.classList.add("hide");
-	gameScreen.classList.remove("hide");
-};
+	players[0].name = player1Input.value;
+	players[1].name = player2Input.value;
+
+	player1DisplayedName.innerText = players[0].name;
+	player2DisplayedName.innerText = players[1].name;
+
+	// HIDE WELCOME SCREEN at LAUNCH
+
+	const welcomeScreen = document.getElementById("welcome");
+	const gameScreen = document.getElementById("game");
+
+	//Supression ecran welcome
+	// welcomeScreen.classList.add("hide");
+	// gameScreen.classList.remove("hide");
+}

@@ -38,7 +38,7 @@
 	</head>
 	<body>
 		<!-- PLAYERS NAME PAGE -->
-		<section class="welcome" id="welcome">
+		<section class="welcome hide" id="welcome">
 			<header>
 				<img src="/images/logo.svg" alt="Roll logo" class="welcome-logo" />
 				<!-- <span class="nav-btn"
@@ -72,14 +72,14 @@
 			<div class="playersnames">
 				<h2>Set your names</h2>
 				<form>
-					<input type="text" id="p1" name="p1" placeholder="Player 1" />
+					<input type="text" id="p1" name="p1" placeholder="Player 1"/>
 					<input type="text" id="p2" name="p2" placeholder="Player 2"/>
 				</form>
 			</div>
 			<button class="launchgame" onclick="launchGame()">Play</button>
 		</section>
 
-		<section class="game hide" id="game">
+		<section class="game" id="game">
 			<div class="players-container">
 				<div class="player-box active-player" id="player1-screen">
 					<!-- active player -> Dynamic class with JS -->
@@ -104,7 +104,7 @@
 						</div>
 						<div class="player-infos--current">
 							<h4 class="current-score-title">Round Score</h4>
-							<p class="current-score-number" id="player1-current-score">12</p>
+							<p class="current-score-number" id="player2-current-score">12</p>
 						</div>
 					</div>
 				</div>
