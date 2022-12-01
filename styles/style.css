@@ -125,6 +125,7 @@ body {
 
 .active-player {
   background: #2a3238;
+  transition: all ease-in 0.5s;
 }
 .active-player .player-name::after,
 .active-player .player-name::before {
@@ -135,6 +136,7 @@ body {
   height: 100%;
   content: "";
   margin: 0 1em 0 0.8em;
+  transition: all ease-in 0.5s;
 }
 
 .player-name {

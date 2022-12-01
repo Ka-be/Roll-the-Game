@@ -6,6 +6,7 @@
 
 .active-player {
 	background: $active-player;
+	transition: all ease-in .5s;
 
 	.player-name::after,
 	.player-name::before {
@@ -16,6 +17,7 @@
 		height: 100%;
 		content: "";
 		margin: 0 1em 0 0.8em;
+		transition: all ease-in .5s;
 	}
 }
 
@@ -55,6 +57,7 @@
 	border-radius: 20px;
 	box-shadow: 4px 8px 20px rgba(0, 0, 0, 0.355);
 }
+
 
 @media (min-width: 1024px) {
 	.player-name {
