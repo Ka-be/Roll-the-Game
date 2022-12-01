@@ -25,6 +25,13 @@ a:active {
 body {
   height: 100vh;
   width: 100vw;
+  background: #1e272e;
+}
+
+.game {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
 }
 
 .players-container {
@@ -119,6 +126,16 @@ body {
     justify-content: space-evenly;
   }
 }
+.welcome {
+  height: 100%;
+  width: 100%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
 .player-box {
   background: #1e272e;
 }
