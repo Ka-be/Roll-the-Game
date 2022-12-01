@@ -39,13 +39,41 @@
 	<body>
 		<!-- PLAYERS NAME PAGE -->
 		<section class="welcome" id="welcome">
-			<nav>
-				<span class="nav-btn">Rules</span>
+			<header>
 				<img src="/images/logo.svg" alt="Roll logo" />
-				<span class="nav-btn">About</span>
-			</nav>
-			<h1>Welcome on the most funniest 2 players game !</h1>
+				<!-- <span class="nav-btn"
+					><a href="http://" target="_blank" rel="noopener noreferrer"
+						>About</a
+					></span
+				> -->
+			</header>
+			<div class="rules">
+				<h1>Roll rules</h1>
+				<ul>
+					<li>The first to reach 100 points wins.</li>
+					<li>Unlimited dice roll per round.</li>
+					<li>If you roll a 1 : You loose the round.</li>
+				</ul>
+			</div>
+			<div class="game-btns">
+				<div class="game-btn">
+					<img src="/images/icons/dice.svg" alt="" class="btn-icon"/>
+					<p>Roll the dice</p>
+				</div>
+				<div class="game-btn">
+					<img src="/images/icons/save.svg" alt=""class="btn-icon"/>
+					<p>Save the round score</p>
+				</div>
+				<div class="game-btn">
+					<img src="/images/icons/new.svg" alt="" class="btn-icon"/>
+					<p>New game</p>
+				</div>
+				
+				
+				
+			</div>
 			<div class="playersnames">
+				<h2>Set your names</h2>
 				<form>
 					<label for="p1">Player 1 name</label>
 					<input type="text" id="p1" name="p1" />
@@ -53,6 +81,7 @@
 					<input type="text" id="p2" name="p2" />
 				</form>
 			</div>
+			<button class="launchgame">Play</button>
 		</section>
 
 		<section class="game" id="game" style="display: none">
