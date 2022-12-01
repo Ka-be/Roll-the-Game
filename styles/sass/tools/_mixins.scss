@@ -1,3 +1,5 @@
+// FLEX 
+
 @mixin column-center {
 	display: flex;
 	flex-direction: column;
@@ -49,4 +51,11 @@
 	display: flex;
 	align-items: center;
 	justify-content: flex-start;
+}
+
+// DESIGN
+@mixin welcome-box{
+	width: 80%;
+	background: $active-player;
+  border-radius: 10px;
 }
