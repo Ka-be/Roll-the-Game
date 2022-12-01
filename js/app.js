@@ -32,7 +32,7 @@ let players = [
 	},
 ];
 
-// GENERATE A RANDOM DICE NUMBER
+// GENERATE A RANDOM DICE NUMBER - OK --------------------------
 const rollButton = document.getElementById("roll"); //Button roll
 let diceDisplay = document.getElementById("diceDisplay"); //Dice picture
 
@@ -40,25 +40,46 @@ rollButton.addEventListener("click", () => {
 	let diceNumber = Math.floor(Math.random() * 6) + 1;
 	diceDisplay.style = "display:block"; // Display the dice
 	diceDisplay.src = "images/dice_" + diceNumber + ".svg";
+
+
+	if(diceNumber == 1){
+		setTimeout(changePlayer, 1500); // Delay after 1 disappear
+		//Reset current score
+	} else {
+		//Add score to current score
+	}
+
 });
 
-// CHANGE PLAYER - SAVE ROUND
+// CHANGE PLAYER - SAVE ROUND SCORE-------------------------- 
 const saveButton = document.getElementById("save");
 const player1Screen = document.getElementById("player1-screen");
 const player2Screen = document.getElementById("player2-screen");
 
-saveButton.addEventListener("click", () => {
+function changePlayer(){
 	player1Screen.classList.toggle("active-player");
 	player2Screen.classList.toggle("active-player");
-	diceDisplay.style = "display:none"; // Hide the dice at the change of player
-	// Add current score to total score
+	diceDisplay.style = "display:none"; 
+
+	//Change status isPlaying - OK
+	if(players[0].isPlaying){
+		players[0].isPlaying = false;
+		players[1].isPlaying = true;
+	} else {
+		players[0].isPlaying = true;
+		players[1].isPlaying = false;
+	}
+};
 
 
-	//Change status isPlaying
-	
-});
+saveButton.addEventListener("click", save);
+function save(){
+	changePlayer();
+	//Add current score to total score
+}
 
-// TEST - Condition changement statut isPlaying
+
+
 
 //-------------------
 
