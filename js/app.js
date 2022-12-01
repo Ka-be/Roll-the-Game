@@ -17,18 +17,7 @@ let players = [
 ];
 
 
-// DISPLAY PLAYERS NAMES
-const player1name = document.getElementById('player1-name');
-const player2name = document.getElementById('player2-name');
 
-function whatIsYourName(){
-	players[0].name = prompt("Joueur 1"); // To replace by a page
-	players[1].name = prompt("Joueur 2");
-}
-// whatIsYourName();
-
-player1name.innerText = players[0].name;
-player2name.innerText = players[1].name;
 
 // RANDOM DICE NUMBER PART
 const rollButton = document.getElementById("roll"); //Button roll
@@ -50,3 +39,29 @@ saveButton.addEventListener("click", () => {
 	player2Screen.classList.toggle("active-player");
 	diceDisplay.style = "display:none"; // Hide the dice at the change of player
 });
+
+//LAUNCH GAME
+//Récuperer les noms des joueurs
+//Les afficher
+//Display none welcome, display section game(delete display none)
+
+
+//Recup Nom joueur
+let player1Input = document.getElementById('p1');
+let player2Input = document.getElementById('p2');
+
+
+
+// DISPLAY PLAYERS NAMES
+const player1DisplayedName = document.getElementById('player1-name');
+const player2DisplayedName = document.getElementById('player2-name');
+
+
+// ECRANS
+
+function launchGame(){
+	const welcomeScreen = document.getElementById('welcome');
+	const gameScreen = document.getElementById('game');
+	welcomeScreen.classList.add("hide");
+	gameScreen.classList.remove("hide");
+};

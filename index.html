@@ -62,7 +62,7 @@
 				</div>
 				<div class="game-btn">
 					<img src="/images/icons/save.svg" alt="" class="btn-icon" />
-					<p>Save the round score</p>
+					<p>Finish the round to save the round score</p>
 				</div>
 				<div class="game-btn">
 					<img src="/images/icons/new.svg" alt="" class="btn-icon" />
@@ -76,10 +76,10 @@
 					<input type="text" id="p2" name="p2" placeholder="Player 2"/>
 				</form>
 			</div>
-			<button class="launchgame">Play</button>
+			<button class="launchgame" onclick="launchGame()">Play</button>
 		</section>
 
-		<section class="game" id="game" style="display: none">
+		<section class="game hide" id="game">
 			<div class="players-container">
 				<div class="player-box active-player" id="player1-screen">
 					<!-- active player -> Dynamic class with JS -->
