@@ -22,7 +22,7 @@ const player1name = document.getElementById('player1-name');
 const player2name = document.getElementById('player2-name');
 
 function whatIsYourName(){
-	players[0].name = prompt("Joueur 1");
+	players[0].name = prompt("Joueur 1"); // To replace by a page
 	players[1].name = prompt("Joueur 2");
 }
 // whatIsYourName();
