@@ -1,4 +1,5 @@
 //PLAYERS DATA----------------
+
 let players = [
 	{
 		playerNumber: 1,
@@ -19,20 +20,8 @@ let players = [
 ];
 
 
-
 //SETUP FUNCTIONS----------------
-launchGame = () => {
-  players[0].name = player1Input.value;
-	players[1].name = player2Input.value;
 
-	player1DisplayedName.innerText = players[0].name;
-	player2DisplayedName.innerText = players[1].name;
-
-
-	// HIDE WELCOME SCREEN at LAUNCH
-	const welcomeScreen = document.getElementById("welcome");
-	const gameScreen = document.getElementById("game");
-}
 
 const player1Screen = document.getElementById("player1-screen");
 const player2Screen = document.getElementById("player2-screen");
@@ -52,15 +41,6 @@ changePlayer = () => {
 	}
 }
 
-resetCurrentScore = (currentPlayer) => {
-//
-}
-
-saveScore = () => {
-  //save current to total score
-  changePlayer();
-  resetScore();
-}
 
 resetScore = () => {
   players[0].roundScore = 0;
@@ -93,7 +73,7 @@ rollButton.addEventListener("click", () => {
 
   
   //SCORE ATTRIBUTION
-  
+
   players.forEach(player => {
     if(player.isPlaying){
       if (diceNumber != 1) {
@@ -106,19 +86,19 @@ rollButton.addEventListener("click", () => {
         //Saving function
         saveButton.addEventListener("click", () => {
           player.totalScore += player.roundScore;
+          player.roundScore = 0
 
           //Display total score
           player1TotalScore.innerText = players[0].totalScore;
           player2TotalScore.innerText = players[1].totalScore;
 
-          resetScore();
-          setTimeout(changePlayer, 1500); // Delay after 1 disappear
+          changePlayer();
         });
 
 
       } else {
-        resetScore();
-        setTimeout(changePlayer, 1500); // Delay after 1 disappear
+        player.roundScore = 0;
+        setTimeout(changePlayer, 500); 
       }
     }
   });
@@ -150,8 +130,27 @@ const player2DisplayedName = document.getElementById("player2-name");
 player1TotalScore.innerText = players[0].totalScore;
 player2TotalScore.innerText = players[1].totalScore;
 
-
-
-//DISPLAY 0 by default
+//DISPLAY Current score 0 by default
 player1RoundScore.innerText = players[0].roundScore;
 player2RoundScore.innerText = players[1].roundScore;
+
+
+
+
+
+// launchGame = () => {
+//   players[0].name = player1Input.value;
+// 	players[1].name = player2Input.value;
+
+// 	player1DisplayedName.innerText = players[0].name;
+// 	player2DisplayedName.innerText = players[1].name;
+
+
+// 	// HIDE WELCOME SCREEN at LAUNCH
+// 	const welcomeScreen = document.getElementById("welcome");
+// 	const gameScreen = document.getElementById("game");
+
+//   	//Supression ecran welcome
+// 	welcomeScreen.classList.add("hide");
+// 	gameScreen.classList.remove("hide");
+// }
