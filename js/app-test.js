@@ -19,35 +19,26 @@ let players = [
 	},
 ];
 
+//-------------------
 
-//SETUP FUNCTIONS----------------
+// LAUNCHGAME FUNCTION
 
+// launchGame = () => {
+//   players[0].name = player1Input.value;
+// 	players[1].name = player2Input.value;
 
-const player1Screen = document.getElementById("player1-screen");
-const player2Screen = document.getElementById("player2-screen");
+// 	player1DisplayedName.innerText = players[0].name;
+// 	player2DisplayedName.innerText = players[1].name;
 
-changePlayer = () => {
-  player1Screen.classList.toggle("active-player");
-	player2Screen.classList.toggle("active-player");
-	diceDisplay.style = "display:none";
+// 	// HIDE WELCOME SCREEN at LAUNCH
+// 	const welcomeScreen = document.getElementById("welcome");
+// 	const gameScreen = document.getElementById("game");
 
-	//Change status isPlaying - OK
-	if(players[0].isPlaying){
-		players[0].isPlaying = false;
-		players[1].isPlaying = true;
-	} else {
-		players[0].isPlaying = true;
-		players[1].isPlaying = false;
-	}
-}
+//   	//Supression ecran welcome
+// 	welcomeScreen.classList.add("hide");
+// 	gameScreen.classList.remove("hide");
+// }
 
-
-resetScore = () => {
-  players[0].roundScore = 0;
-  players[1].roundScore = 0;
-  player1RoundScore.innerText = players[0].roundScore;
-  player2RoundScore.innerText = players[1].roundScore;
-}
 
 //----------------------
 
@@ -60,6 +51,24 @@ const saveButton = document.getElementById("save");
 const player1TotalScore = document.getElementById("player1-total-score");
 const player2TotalScore = document.getElementById("player2-total-score");
 
+const player1Screen = document.getElementById("player1-screen");
+const player2Screen = document.getElementById("player2-screen");
+
+changePlayer = () => {
+		//Change status isPlaying - TO OPTIMIZE
+		if (players[0].isPlaying) {
+			players[0].isPlaying = false;
+			players[1].isPlaying = true;
+		} else {
+			players[0].isPlaying = true;
+			players[1].isPlaying = false;
+		}
+	
+	player1Screen.classList.toggle("active-player");
+	player2Screen.classList.toggle("active-player");
+	diceDisplay.style = "display:none";
+};
+
 
 
 // GENERATE A RANDOM DICE NUMBER - OK --------------------------
@@ -71,48 +80,44 @@ rollButton.addEventListener("click", () => {
 	diceDisplay.style = "display:block"; // Display the dice
 	diceDisplay.src = "images/dice_" + diceNumber + ".svg";
 
-  
-  //SCORE ATTRIBUTION
+	// LOG ERRORS
+	console.log("P1 : " + players[0].isPlaying);
+	console.log("P2 : " + players[1].isPlaying);
+	
+	//SCORE ATTRIBUTION
 
-  players.forEach(player => {
-    if(player.isPlaying){
-      if (diceNumber != 1) {
-        player.roundScore += diceNumber;
+	players.forEach((player) => {
+		if (player.isPlaying) {
+			if (diceNumber != 1) {
+				player.roundScore += diceNumber;
 
-        //Display round score
-        player1RoundScore.innerText = players[0].roundScore;
-        player2RoundScore.innerText = players[1].roundScore;
+				//Display round score
+				player1RoundScore.innerText = players[0].roundScore;
+				player2RoundScore.innerText = players[1].roundScore;
 
-        //Saving function
-        saveButton.addEventListener("click", () => {
-          player.totalScore += player.roundScore;
-          player.roundScore = 0
+				//Saving function - ERROR HERE
+				saveButton.addEventListener("click", () => {
+					
+					player.totalScore += player.roundScore;
+					player.roundScore = 0; // RESET
 
-          //Display total score
-          player1TotalScore.innerText = players[0].totalScore;
-          player2TotalScore.innerText = players[1].totalScore;
+					//Display total score
+					player1TotalScore.innerText = players[0].totalScore;
+					player2TotalScore.innerText = players[1].totalScore;
+					changePlayer();
 
-          changePlayer();
-        });
+				});
 
-
-      } else {
-        player.roundScore = 0;
-        setTimeout(changePlayer, 500); 
-      }
-    }
-  });
+			} else {
+				player.roundScore = 0; // RESET
+				setTimeout(changePlayer, 500);
+				
+			}
+		}
+	});
 });
 
-
-
-//-------------------
-
-
-
-
-
-
+//CHANGE PLAYER FUNCTION----------------
 
 
 
@@ -126,7 +131,6 @@ const player1DisplayedName = document.getElementById("player1-name");
 const player2DisplayedName = document.getElementById("player2-name");
 
 // DISPLAY TOTAL SCORE 0 by default
-
 player1TotalScore.innerText = players[0].totalScore;
 player2TotalScore.innerText = players[1].totalScore;
 
@@ -134,23 +138,4 @@ player2TotalScore.innerText = players[1].totalScore;
 player1RoundScore.innerText = players[0].roundScore;
 player2RoundScore.innerText = players[1].roundScore;
 
-
-
-
-
-// launchGame = () => {
-//   players[0].name = player1Input.value;
-// 	players[1].name = player2Input.value;
-
-// 	player1DisplayedName.innerText = players[0].name;
-// 	player2DisplayedName.innerText = players[1].name;
-
-
-// 	// HIDE WELCOME SCREEN at LAUNCH
-// 	const welcomeScreen = document.getElementById("welcome");
-// 	const gameScreen = document.getElementById("game");
-
-//   	//Supression ecran welcome
-// 	welcomeScreen.classList.add("hide");
-// 	gameScreen.classList.remove("hide");
-// }
+//DISPLAY NAME BY DEFAULT
