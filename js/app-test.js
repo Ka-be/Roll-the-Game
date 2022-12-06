@@ -42,9 +42,7 @@ let players = [
 
 //----------------------
 
-// DISPLAY ROUND SCORE
-const player1RoundScore = document.getElementById("player1-current-score");
-const player2RoundScore = document.getElementById("player2-current-score");
+
 
 // DISPLAY TOTAL SCORE & SAVE BUTTON
 const saveButton = document.getElementById("save");
@@ -79,21 +77,19 @@ rollButton.addEventListener("click", () => {
 	let diceNumber = Math.floor(Math.random() * 6) + 1;
 	diceDisplay.style = "display:block"; // Display the dice
 	diceDisplay.src = "images/dice_" + diceNumber + ".svg";
-
-	// LOG ERRORS
-	console.log("P1 : " + players[0].isPlaying);
-	console.log("P2 : " + players[1].isPlaying);
 	
 	//SCORE ATTRIBUTION
 
 	players.forEach((player) => {
 		if (player.isPlaying) {
 			if (diceNumber != 1) {
-				player.roundScore += diceNumber;
+				player.roundScore += diceNumber; // Add dice score to player current score
 
-				//Display round score
-				player1RoundScore.innerText = players[0].roundScore;
-				player2RoundScore.innerText = players[1].roundScore;
+				// DISPLAY ROUND SCORE OK
+
+				console.log(player.roundScore);
+				let currentScoreDisplayed = document.querySelector('#player' + player.playerNumber + '-current-score'); 
+				currentScoreDisplayed.innerText = player.roundScore; // Error here - No reset displaying
 
 				//Saving function - ERROR HERE
 				saveButton.addEventListener("click", () => {
@@ -110,16 +106,11 @@ rollButton.addEventListener("click", () => {
 
 			} else {
 				player.roundScore = 0; // RESET
-				setTimeout(changePlayer, 500);
-				
+				setTimeout(changePlayer, 1000);
 			}
 		}
 	});
 });
-
-//CHANGE PLAYER FUNCTION----------------
-
-
 
 
 //PLAYERS NAMES IMPUT
@@ -137,5 +128,3 @@ player2TotalScore.innerText = players[1].totalScore;
 //DISPLAY Current score 0 by default
 player1RoundScore.innerText = players[0].roundScore;
 player2RoundScore.innerText = players[1].roundScore;
-
-//DISPLAY NAME BY DEFAULT
