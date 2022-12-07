@@ -7,7 +7,6 @@ let players = [
 		currentScore: 0,
 		totalScore: 0,
 		isPlaying: true,
-		isTheWinner: false,
 	},
 	{
 		playerNumber: 2,
@@ -15,7 +14,6 @@ let players = [
 		currentScore: 0,
 		totalScore: 0,
 		isPlaying: false,
-		isTheWinner: false,
 	},
 ];
 
@@ -41,28 +39,20 @@ let players = [
 
 //----------------------
 
-// ETAPES
-/*
-- Afficher les noms
-- Afficher score total par défaut OK
-- Afficher round score par défaut OK
-- Change player OK
-- Roll the dice
-- Save
-- New game (Reset)
-*/
 
-//DISPLAY Total & current score 0 by default - OK
+// DEFAULT DISPLAY Total & current score 0 - OK
 players.forEach((player) => { 
 	document.querySelector('#player' + player.playerNumber + '-total-score').innerText = player.totalScore;
 	document.querySelector('#player' + player.playerNumber + '-current-score').innerText = player.currentScore;
 });
 
 
-// ROLL THE DICE
+// ROLL THE DICE 
 const rollButton = document.getElementById("roll"); //Button roll
 const diceDisplay = document.getElementById("diceDisplay"); //Dice picture
 
+
+// Roll the dice
 rollButton.addEventListener("click", () => {
 	let diceNumber = Math.floor(Math.random() * 6) + 1;
 	diceDisplay.style = "display:block"; // Display the dice
@@ -77,33 +67,35 @@ rollButton.addEventListener("click", () => {
 				// Display the current cumulated Score at each roll
 				document.querySelector('#player' + player.playerNumber + '-current-score').innerText = player.currentScore;
 
-				// Save the current score to the total score
+				// SAVE the current score to the total score
 				document.getElementById("save").addEventListener("click", () => {
 					
 					player.totalScore += player.currentScore;
 					player.currentScore = 0; // Reset the current score
 
-					if(player.totalScore < 20){ // Winning game
+					// WINNING GAME CONDITION
+					if(player.totalScore < 100){ 
+
 						//Display total score & reset current score
 						document.querySelector('#player' + player.playerNumber + '-total-score').innerText = player.totalScore;
 						document.querySelector('#player' + player.playerNumber + '-current-score').innerText = player.currentScore;
 						changePlayer();
 					} else {
-						// Condition winning
+
+						// Display "winner", final score and css class for the winner screen
 						document.querySelector('#player' + player.playerNumber + '-total-score').innerText = player.totalScore;
 						document.querySelector('#player' + player.playerNumber + '-name').innerText = 'Winner !';
 						document.querySelector('#player' + player.playerNumber + '-screen').classList.add("winner");
 					}
 				});
 			} else {
-				player.currentScore = 0; // Reset current score
+				player.currentScore = 0; // IF DICE NUMBER IS 1 : Reset current score
 				document.querySelector('#player' + player.playerNumber + '-current-score').innerText = player.currentScore; // Display reseted current score
 				setTimeout(changePlayer, 1200) // changePlayer
 			}
 		}
 	})
 })
-
 
 // CHANGE PLAYER FUNCTION
 changePlayer = () => {
@@ -119,3 +111,12 @@ changePlayer = () => {
 	};
 }
 
+// RESET THE GAME FUNCTION
+// newGame = () => {
+// 	players.forEach((player) => { 
+// 		player.totalScore = 0;
+// 		player.currentScore = 0;
+// 		document.querySelector('#player' + player.playerNumber + '-total-score').innerText = player.totalScore;
+// 		document.querySelector('#player' + player.playerNumber + '-current-score').innerText = player.currentScore;
+// 	});
+// };
