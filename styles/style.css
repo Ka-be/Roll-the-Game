@@ -267,6 +267,10 @@ form input:focus {
   transition: all ease-in 0.5s;
 }
 
+.winner {
+  background: rgba(148, 61, 255, 0.301);
+}
+
 .player-name {
   text-transform: uppercase;
   font-weight: 300;

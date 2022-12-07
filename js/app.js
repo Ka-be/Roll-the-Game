@@ -59,14 +59,14 @@ players.forEach((player) => {
 });
 
 
-// ROLL THE DICE 
+// ROLL THE DICE
 const rollButton = document.getElementById("roll"); //Button roll
 const diceDisplay = document.getElementById("diceDisplay"); //Dice picture
 
 rollButton.addEventListener("click", () => {
 	let diceNumber = Math.floor(Math.random() * 6) + 1;
 	diceDisplay.style = "display:block"; // Display the dice
-	diceDisplay.src = "images/dice_" + diceNumber + ".svg";
+	diceDisplay.src = "images/dice_" + diceNumber + ".svg"; //Display the right image of dice
 
 	// SCORE ATTRIBUTION
 	players.forEach((player) => {
@@ -74,11 +74,31 @@ rollButton.addEventListener("click", () => {
 			if (diceNumber != 1){
 				player.currentScore += diceNumber; // Add the dice number to the active player currentScore
 				
-				// Display the current Score 
+				// Display the current cumulated Score at each roll
 				document.querySelector('#player' + player.playerNumber + '-current-score').innerText = player.currentScore;
 
-				// Save the score
-				// Bug at changePlayer call
+				// Save the current score to the total score
+				document.getElementById("save").addEventListener("click", () => {
+					
+					player.totalScore += player.currentScore;
+					player.currentScore = 0; // Reset the current score
+
+					if(player.totalScore < 20){ // Winning game
+						//Display total score & reset current score
+						document.querySelector('#player' + player.playerNumber + '-total-score').innerText = player.totalScore;
+						document.querySelector('#player' + player.playerNumber + '-current-score').innerText = player.currentScore;
+						changePlayer();
+					} else {
+						// Condition winning
+						document.querySelector('#player' + player.playerNumber + '-total-score').innerText = player.totalScore;
+						document.querySelector('#player' + player.playerNumber + '-name').innerText = 'Winner !';
+						document.querySelector('#player' + player.playerNumber + '-screen').classList.add("winner");
+					}
+				});
+			} else {
+				player.currentScore = 0; // Reset current score
+				document.querySelector('#player' + player.playerNumber + '-current-score').innerText = player.currentScore; // Display reseted current score
+				setTimeout(changePlayer, 1200) // changePlayer
 			}
 		}
 	})
