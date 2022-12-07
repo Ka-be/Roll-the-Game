@@ -9,7 +9,6 @@ body {
 .game{
 	height: 100%;
 	width: 100%;
-	overflow: hidden;
 }
 
 .players-container {
@@ -69,6 +68,7 @@ body {
 //--------------------------------------------
 // DESKTOP DISPLAY (ROW)
 @media (min-width: 1024px) {
+
 	.players-container {
 		flex-direction: row;
 	}
