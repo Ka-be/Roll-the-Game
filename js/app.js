@@ -44,20 +44,19 @@ let players = [
 // ETAPES
 /*
 - Afficher les noms
-- Afficher score total par défaut
-- Afficher round score par défaut
+- Afficher score total par défaut OK
+- Afficher round score par défaut OK
+- Change player OK
 - Roll the dice
 - Save
 - New game (Reset)
 */
 
-//DISPLAY Total & current score 0 by default - ForEach
+//DISPLAY Total & current score 0 by default - OK
 players.forEach((player) => { 
-	let totalScoreDisplayed = document.querySelector('#player' + player.playerNumber + '-total-score')
-	let currentScoreDisplayed = document.querySelector('#player' + player.playerNumber + '-current-score')
-	totalScoreDisplayed.innerText = player.totalScore;
-	currentScoreDisplayed.innerText = player.currentScore;
-})
+	document.querySelector('#player' + player.playerNumber + '-total-score').innerText = player.totalScore;
+	document.querySelector('#player' + player.playerNumber + '-current-score').innerText = player.currentScore;
+});
 
 
 // ROLL THE DICE 
@@ -68,4 +67,35 @@ rollButton.addEventListener("click", () => {
 	let diceNumber = Math.floor(Math.random() * 6) + 1;
 	diceDisplay.style = "display:block"; // Display the dice
 	diceDisplay.src = "images/dice_" + diceNumber + ".svg";
+
+	// SCORE ATTRIBUTION
+	players.forEach((player) => {
+		if (player.isPlaying){
+			if (diceNumber != 1){
+				player.currentScore += diceNumber; // Add the dice number to the active player currentScore
+				
+				// Display the current Score 
+				document.querySelector('#player' + player.playerNumber + '-current-score').innerText = player.currentScore;
+
+				// Save the score
+				// Bug at changePlayer call
+			}
+		}
+	})
 })
+
+
+// CHANGE PLAYER FUNCTION
+changePlayer = () => {
+	for(let i=0; i<players.length; i++){
+
+		// Toggle status of isPLaying
+		players[i].isPlaying = !players[i].isPlaying;
+
+		// Changing style of ActivePlayer Screen & hide the dice before next round
+		let activePlayerScreen = document.querySelector('#player' + players[i].playerNumber + '-screen'); 
+		activePlayerScreen.classList.toggle("active-player");
+		diceDisplay.style = "display:none";
+	};
+}
+
