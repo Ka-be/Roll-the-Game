@@ -18,16 +18,6 @@ header {
 	}
 }
 
-// .nav-btn {
-// 	height: 30px;
-// 	width: 80px;
-// 	background: $light-grey;
-// 	color: $active-player;
-// 	font-weight: 700;
-// 	border-radius: 20px;
-// 	@include row-center;
-// }
-
 .rules {
 	padding: 1em;
 
@@ -68,8 +58,8 @@ form {
 		width: 100%;
 		height: 40px;
 		border-radius: 15px;
-		margin-top: 5px;
-		background: #cea6ff66;
+		margin-top: 10px;
+		background: hsla(221, 42%, 91%, 0.2);
 		color: white;
 		text-align: center;
 		border: none;
@@ -80,9 +70,26 @@ form {
 		}
 
 		&:focus {
-			background: #933cff;
+			background: hsla(221, 42%, 91%, 0.5);
 			outline: none;
 		}
+	}
+}
+
+.launchgame{
+	padding: 1em;
+	border: none;
+	cursor: pointer;
+	border-radius: 10px;
+	color: $light-grey;
+	background: $dark-grey;
+	font-weight: 700;
+	font-size: 1.2em;
+	text-transform: uppercase;
+	transition: background ease-out .5s;
+
+	&:hover{
+		background: $purple;
 	}
 }
 

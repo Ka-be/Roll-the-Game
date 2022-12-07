@@ -17,28 +17,6 @@ let players = [
 	},
 ];
 
-//-------------------
-
-// LAUNCHGAME FUNCTION - TO BE ACTIVATE
-
-// launchGame = () => {
-//   players[0].name = player1Input.value;
-// 	players[1].name = player2Input.value;
-
-// 	player1DisplayedName.innerText = players[0].name;
-// 	player2DisplayedName.innerText = players[1].name;
-
-// 	// HIDE WELCOME SCREEN at LAUNCH
-// 	const welcomeScreen = document.getElementById("welcome");
-// 	const gameScreen = document.getElementById("game");
-
-//   	//Supression ecran welcome
-// 	welcomeScreen.classList.add("hide");
-// 	gameScreen.classList.remove("hide");
-// }
-
-//----------------------
-
 
 // DEFAULT DISPLAY Total & current score 0 - OK
 players.forEach((player) => { 
@@ -120,3 +98,25 @@ changePlayer = () => {
 // 		document.querySelector('#player' + player.playerNumber + '-current-score').innerText = player.currentScore;
 // 	});
 // };
+
+//-------------------
+
+// LAUNCHGAME FUNCTION - TO BE ACTIVATE
+
+// launchGame = () => {
+//   players[0].name = player1Input.value;
+// 	players[1].name = player2Input.value;
+
+// 	player1DisplayedName.innerText = players[0].name;
+// 	player2DisplayedName.innerText = players[1].name;
+
+// 	// HIDE WELCOME SCREEN at LAUNCH
+// 	const welcomeScreen = document.getElementById("welcome");
+// 	const gameScreen = document.getElementById("game");
+
+//   	//Supression ecran welcome
+// 	welcomeScreen.classList.add("hide");
+// 	gameScreen.classList.remove("hide");
+// }
+
+//----------------------

@@ -207,8 +207,8 @@ form input {
   width: 100%;
   height: 40px;
   border-radius: 15px;
-  margin-top: 5px;
-  background: rgba(206, 166, 255, 0.4);
+  margin-top: 10px;
+  background: hsla(221deg, 42%, 91%, 0.2);
   color: white;
   text-align: center;
   border: none;
@@ -224,8 +224,24 @@ form input::placeholder {
   color: #dfe5f2;
 }
 form input:focus {
-  background: #933cff;
+  background: hsla(221deg, 42%, 91%, 0.5);
   outline: none;
+}
+
+.launchgame {
+  padding: 1em;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+  color: #dfe5f2;
+  background: #78838b;
+  font-weight: 700;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  transition: background ease-out 0.5s;
+}
+.launchgame:hover {
+  background: #933cff;
 }
 
 @media (min-width: 1000px) {
