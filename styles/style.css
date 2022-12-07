@@ -23,6 +23,10 @@ a:active {
   color: inherit;
 }
 
+html {
+  height: 100%;
+}
+
 body {
   height: 100vh;
   width: 100vw;
