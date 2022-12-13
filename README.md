@@ -20,8 +20,8 @@ A Realization of a browser game for the mock school exam [STUDI](https://www.stu
 
 ## 💡 Features
 
+![Responsive](https://img.shields.io/badge/Responsive-Full-27AE60?style=flat-square)
 - 2 players game
-- Responsive display
 
 ---
 
