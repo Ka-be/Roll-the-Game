@@ -44,14 +44,14 @@ A Realization of a browser game for the mock school exam [STUDI](https://www.stu
 
 Hex                                                              |
 ---------------------------------------------------------------- |
-![#38434B](https://via.placeholder.com/10/38434B?text=+) #38434B |
-![#1E272E](https://via.placeholder.com/10/1E272E?text=+) #1E272E |
-![#FFFFFF](https://via.placeholder.com/10/FFFFFF?text=+) #FFFFFF |
-![#933CFF](https://via.placeholder.com/10/933CFF?text=+) #933CFF |
-![#CEA6FF](https://via.placeholder.com/10/CEA6FF?text=+) #CEA6FF |
-![#78838B](https://via.placeholder.com/10/78838B?text=+) #78838B |
-![#637582](https://via.placeholder.com/10/637582?text=+) #637582 |
-![#DFE5F2](https://via.placeholder.com/10/DFE5F2?text=+) #DFE5F2 |
+![#38434B](https://placehold.co/15x15/38434B/38434B.png) `#38434B` |
+![#1E272E](https://placehold.co/15x15/1E272E/1E272E.png) `#1E272E` |
+![#FFFFFF](https://placehold.co/15x15/FFFFFF/FFFFFF.png) `#FFFFFF` |
+![#933CFF](https://placehold.co/15x15/933CFF/933CFF.png) `#933CFF` |
+![#CEA6FF](https://placehold.co/15x15/CEA6FF/CEA6FF.png) `#CEA6FF` |
+![#78838B](https://placehold.co/15x15/78838B/78838B.png) `#78838B` |
+![#637582](https://placehold.co/15x15/637582/637582.png) `#637582` |
+![#DFE5F2](https://placehold.co/15x15/637582/637582.png) `#637582` |
 
 ---
 
