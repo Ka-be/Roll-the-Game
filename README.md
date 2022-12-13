@@ -1,4 +1,4 @@
-# Roll - Webapp Game
+# Roll - Webapp Game - ![Status](https://img.shields.io/badge/Status-On%20going-fd9644?style=flat-square)
 
 <img src="images/logo.svg" width=15%>
 
